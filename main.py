@@ -7,7 +7,7 @@ from src.routes import usuarios, consultas
 
 app = FastAPI(title="Registro de consultas de alumnos - IFTS 21")
 
-# En Railway: FRONTEND_ORIGIN=https://tu-sitio.netlify.app
+# En Railway o Render: FRONTEND_ORIGIN=https://ifts21-form-consulta-prueba.netlify.app/
 origenes = [x.strip() for x in os.getenv("FRONTEND_ORIGIN", "").split(",") if x.strip()]
 if origenes:
     app.add_middleware(CORSMiddleware, allow_origins=origenes, allow_methods=["GET", "POST", "PATCH"], allow_headers=["Content-Type"])
