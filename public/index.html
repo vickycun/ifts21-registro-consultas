@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Consultas de alumnos | IFTS 21</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="contenedor"><header><p class="eyebrow">IFTS 21 · Ejemplo didáctico</p><h1>Registro de consultas de alumnos</h1><p>Registrá consultas recibidas en Secretaría y hacé seguimiento de las pendientes.</p></header>
+<section class="panel"><h2>1. Buscar alumno</h2><div class="fila"><input id="apellido" placeholder="Apellido, por ejemplo López" aria-label="Apellido"><button id="buscar" type="button">Buscar</button><button id="todos" class="secundario" type="button">Todos</button></div>
+<form id="form"><label for="usuario">Alumno</label><select id="usuario" required></select><label for="descripcion">Descripción de la consulta</label><textarea id="descripcion" rows="3" minlength="5" maxlength="2000" required placeholder="Ej.: Consultó por equivalencias..."></textarea><button type="submit">Registrar consulta</button></form><p id="resultado" role="status" aria-live="polite"></p></section>
+<section class="panel"><div class="encabezado"><h2>2. Historial de consultas</h2><button id="actualizar" class="secundario" type="button">Actualizar</button></div><label for="filtro">Mostrar</label><select id="filtro"><option value="">Todos los alumnos</option><option value="actual">Alumno seleccionado</option></select><div id="historial" aria-live="polite"></div></section>
+<footer>Demo educativa · No utilizar datos personales reales sin las protecciones correspondientes.</footer></main>
+<script src="config.js"></script><script src="app.js"></script></body></html>
